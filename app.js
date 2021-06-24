@@ -2,7 +2,7 @@ const express =require("express");
 const path = require("path");
 const fs = require("fs");
 const app =express();
-const port = 80;
+const port = process.env.port ||8000;
 
 
 
@@ -27,6 +27,6 @@ app.post('/',(req,res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log('This application is suceesfull on port80 ');
+    console.log('This application is suceesfull on port 8000');
 
 });
